@@ -46,9 +46,20 @@ blockquote footer:before {
     border-top: 1px solid rgba(0, 0, 0, 0.315);
 }
 
+.about_us-history{
+    width: 90%;
+    font-size: 1.1em;
+    line-height: 1.9em;
+}
+
+.about_us-history h1{
+    padding-left: 1.1em;
+    text-align: center;
+}
+
 .about_us-text{
     width: 45%;
-    font-size: 18px;
+    font-size: 1.1em;
     line-height: 1.9em;
 }
 
@@ -72,13 +83,9 @@ blockquote footer:before {
     text-align: justify;
 }
 
-.about_us-text h1{
-    padding-left: 1.1em;
-}
-
 .about_us-img{
     position: relative;
-    width: 30%;
+    width: 36%;
     height: 450px;
     text-align: center;
     overflow: hidden;
@@ -93,4 +100,54 @@ blockquote footer:before {
     transform: translate(-50%, -50%);
     object-fit: cover;
     width: 100%;
+}
+
+@media screen and (max-width: 1110px){
+    .about_us{
+        flex-direction: column;
+    }
+
+    .about_us:nth-child(even){
+        flex-direction: column-reverse;
+    }
+
+    .about_us-text{
+        width: 80%;
+    }
+
+    .about_us-img{
+        width: 50%;
+        max-height: 550px;
+    }
+}
+
+
+
+@media screen and (max-width: 991px){
+    .about_us-img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .about_us-img {
+        width: 90%;
+        max-height: 400px;
+    }
+    .about_us-text{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .about_us{
+        margin-bottom: 0;
+    }
+    .about_us-text h1 {
+        padding-left: 0; 
+        text-align: center;
+    }
+    .about_us-img {
+        max-height: 300px;
+    }
 }
